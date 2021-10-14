@@ -1,28 +1,18 @@
-import { useEffect, useRef } from "react";
-import { useState } from "react/cjs/react.development"
+
+import useScrollBottom from "react-scroll-bottom-hook";
+
 
 
 
 export default function Document(props){
-   
-  const divContent = useRef();
 
-   const [scrolled, setScroll] = useState(false);
+   const [scrolled, setScroll] = useScrollBottom();
   
-  
-   useEffect(()=> {
-   if(divContent.current.scrollToBottom){
-     setScroll(true)
-   } else {
-     setScroll(false);
-   }
-      
-   }, [scrolled])
     return (
       <>
       <h1 className="title" value={"Terms and Conditions"}>Terms and Conditions</h1>
-      <div className="content" ref={divContent} >{props.txt}</div>
-      <button disabled={`${scrolled === true ? true : false}`}>I Agree</button>
+      <div className="content" style={{overflowY: 'scroll'}} ref={setScroll} >{props.txt}</div>
+      <button disabled={!scrolled}>I Agree</button>
       </>
     )
     

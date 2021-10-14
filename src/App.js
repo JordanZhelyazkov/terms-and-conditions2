@@ -8,7 +8,7 @@ function App() {
        const abortCtrl = new AbortController();
        
       fetch("https://jaspervdj.be/lorem-markdownum/markdown.txt")
-      .then(res => res.text())
+      .then(response => response.text())
       .then(data => {
           setText(data);
       })
