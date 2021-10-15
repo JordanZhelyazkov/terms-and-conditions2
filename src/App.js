@@ -1,4 +1,4 @@
-import  Document  from "./Document";
+import  Document  from "./Components.js/Document";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -15,10 +15,6 @@ function App() {
       return () => abortCtrl.abort();
     }, []);
       
-  
-  
-  
-  
   return (
     <div className="App">
       <section class="hero">
