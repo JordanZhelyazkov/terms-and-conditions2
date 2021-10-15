@@ -2,7 +2,7 @@
 import {  useRef } from "react";
 import { useState} from "react/cjs/react.development";
 
-export default function Document({title, content}){
+export default function Document({content}){
   const [scrolled, setScrolled] = useState(false);
    const div = useRef(null);
   
