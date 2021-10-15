@@ -2,7 +2,7 @@
 import {  useRef } from "react";
 import { useState} from "react/cjs/react.development";
 
-export default function Document({content}){
+export default function Document(props) {
   const [scrolled, setScrolled] = useState(false);
    const div = useRef(null);
   
@@ -15,8 +15,8 @@ export default function Document({content}){
    
     return (
       <>
-      <h1 className="title" >Terms and Conditions</h1>
-      <div className="content" onScrollCapture={scrolledDown} style={{overflowY: 'scroll'}} ref={div} >{content}</div>
+      <h1 className="title" >{props.title}</h1>
+      <div className="content" onScrollCapture={scrolledDown} style={{overflowY: 'scroll'}} ref={div} >{props.content}</div>
       <button disabled={!scrolled} >I Agree</button>
       </>
     )
