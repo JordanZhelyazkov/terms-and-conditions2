@@ -1,4 +1,4 @@
-import  Document  from "./Components.js/Document";
+import  Document  from "./Document";
 import "./App.css";
 import { useEffect, useState } from "react";
 
