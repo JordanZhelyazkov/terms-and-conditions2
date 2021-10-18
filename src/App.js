@@ -25,7 +25,7 @@ function App() {
       </section>
       <div class="container is-fullhd">
         <div class="notification">
-          <Document title={'Terms and Conditions'} content={text} />
+          <Document title='Terms and Conditions' content={text} />
             
           {/* Edit the <code>./src</code> folder to add components. */}
          </div>

@@ -16,11 +16,11 @@ export default function Document({title, content}) {
   
    
     return (
-      <>
-      <h1 class="title" >{title}</h1>
+      <div>
+      <h1 className="title" >{title}</h1>
       <div className="content" onScrollCapture={scrolledDown} style={{overflowY: 'scroll'}} ref={div} >{content}</div>
       <button disabled={!scrolled} >I Agree</button>
-      </>
+      </div>
     )
     
   }   
